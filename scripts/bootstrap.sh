@@ -17,8 +17,11 @@ if [[ ! -x "${repo_root}/.venv/bin/python" ]]; then
     "${seed_python}" -m venv --system-site-packages "${repo_root}/.venv"
 fi
 python_bin="${repo_root}/.venv/bin/python"
-"${python_bin}" -m pip install 'setuptools>=68'
-"${python_bin}" -m pip install --no-build-isolation -e "${repo_root}"
+if ! "${python_bin}" -c 'import ase, gpaw, numpy, scipy' >/dev/null 2>&1; then
+    "${python_bin}" -m pip install -r "${repo_root}/environment/requirements.txt"
+fi
+site_packages="$("${python_bin}" -c 'import site; print(site.getsitepackages()[0])')"
+printf '%s\n' "${repo_root}/src" > "${site_packages}/physop_gpu.pth"
 
 if [[ -n "${GPAW_SETUP_PATH:-}" ]]; then
     echo "Using GPAW_SETUP_PATH=${GPAW_SETUP_PATH}"
