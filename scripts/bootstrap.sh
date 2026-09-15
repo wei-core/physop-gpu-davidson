@@ -17,6 +17,7 @@ if [[ ! -x "${repo_root}/.venv/bin/python" ]]; then
     "${seed_python}" -m venv --system-site-packages "${repo_root}/.venv"
 fi
 python_bin="${repo_root}/.venv/bin/python"
+"${python_bin}" -m pip install 'setuptools>=68'
 "${python_bin}" -m pip install --no-build-isolation -e "${repo_root}"
 
 if [[ -n "${GPAW_SETUP_PATH:-}" ]]; then
