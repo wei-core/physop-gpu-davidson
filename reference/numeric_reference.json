@@ -1,0 +1,7 @@
+{
+  "source": "V5R E3/E4/E5 validated artifacts",
+  "tolerance": 5e-10,
+  "representation": "GAMMA_PACKED",
+  "rr": {"backend": "cusolverDnDsygvd", "itype": 1, "uplo": "lower", "m": "2*Nb"},
+  "state_boundary": "GPAW native subspace_diagonalize output (X/P/eps)"
+}

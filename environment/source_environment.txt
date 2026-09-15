@@ -1,0 +1,8 @@
+Python 3.14.6
+GPAW 25.7.0
+ASE 3.29.0
+NumPy 2.5.1
+SciPy 1.18.0
+GPAW setup data 1.0.1
+Source GPU: NVIDIA RTX 3050 Ti Laptop GPU, compute capability 8.6
+Source CUDA driver API 12060, CUDA toolkit/runtime 12.8

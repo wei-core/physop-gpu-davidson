@@ -1,0 +1,10 @@
+{
+  "hardware": "RTX 3050 Ti source-machine reference",
+  "speedup_native_over_gpu": {
+    "SIC-008": 0.814069,
+    "SIC-032": 1.007455,
+    "SIC-064": 1.848613,
+    "SIC-128": 1.954261,
+    "SIC-216": 1.981311
+  }
+}

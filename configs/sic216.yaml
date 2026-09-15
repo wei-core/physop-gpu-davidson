@@ -1,0 +1,6 @@
+case: SIC-216
+material: 3C-SiC
+replication: [3, 3, 3]
+ecut_eV: 400
+bands_policy: "ceil(1.20 * 4 * N_atom / 2)"
+gamma: true

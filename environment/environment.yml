@@ -1,0 +1,11 @@
+name: physop-gpu
+channels:
+  - conda-forge
+dependencies:
+  - python=3.14
+  - numpy>=2.0
+  - scipy>=1.10
+  - ase>=3.22
+  - pip
+  - pip:
+      - gpaw>=25.7

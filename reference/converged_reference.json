@@ -1,0 +1,18 @@
+{
+  "hardware": "RTX 3050 Ti source-machine reference",
+  "speedup_native_over_gpu": {
+    "SIC-008": 1.05470,
+    "SIC-032": 1.26656,
+    "SIC-064": 1.73215,
+    "SIC-128": 1.77788,
+    "SIC-216": 1.14728
+  },
+  "SIC-216": {
+    "native_scf_iterations": 67,
+    "gpu_scf_iterations": 67,
+    "native_total_s": 2881.976,
+    "gpu_total_s": 2512.018,
+    "native_davidson_s": 2052.117,
+    "gpu_davidson_s": 772.303
+  }
+}
