@@ -14,11 +14,10 @@ if [[ -z "${seed_python}" ]]; then
     fi
 fi
 if [[ ! -x "${repo_root}/.venv/bin/python" ]]; then
-    "${seed_python}" -m venv "${repo_root}/.venv"
+    "${seed_python}" -m venv --system-site-packages "${repo_root}/.venv"
 fi
 python_bin="${repo_root}/.venv/bin/python"
-"${python_bin}" -m pip install --upgrade pip
-"${python_bin}" -m pip install -e "${repo_root}"
+"${python_bin}" -m pip install --no-build-isolation -e "${repo_root}"
 
 if [[ -n "${GPAW_SETUP_PATH:-}" ]]; then
     echo "Using GPAW_SETUP_PATH=${GPAW_SETUP_PATH}"
